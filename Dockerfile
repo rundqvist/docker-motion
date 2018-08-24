@@ -9,9 +9,9 @@ RUN apk add --update --no-cache \
 RUN pip2 install --upgrade pip && pip2 install motioneye
 RUN echo "@testing http://nl.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories
 RUN apk add motion@testing --force-broken-world
-RUN mkdir /var/lib/motioneye
+#RUN mkdir /var/lib/motioneye
 
-VOLUME [ "/etc/motion" ]
+VOLUME [ "/etc/motion", "/var/lib/motioneye" ]
 
 COPY root /
 
