@@ -15,6 +15,7 @@ https://hub.docker.com/r/rundqvist/motion/
 $ sudo docker run \
     -d \
     -p 8765:8765 \
+    -p 7999:7999 \
     -v /path/to/config:/etc/motion/ \
     -v /path/to/media:/var/lib/motioneye/ \
     -v /etc/localtime:/etc/localtime:ro \
